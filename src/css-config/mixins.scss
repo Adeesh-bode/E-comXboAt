@@ -1,0 +1,47 @@
+@mixin sm {
+    @media only screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media only screen and (min-width: 1536px) {
+        @content;
+    }
+}
+
+
+
+@mixin slideup{
+
+    transform: translateY(100%);
+    animation: slideup 3s ease forwards 6s;
+
+    @keyframes slideup {
+        0%{
+            transform: translateY(100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+}
+

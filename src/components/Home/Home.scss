@@ -1,0 +1,14 @@
+@import "../../css-config/mixins.scss";
+
+.home-content{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    .home-main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}

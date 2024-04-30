@@ -1,0 +1,52 @@
+@import "../../css-config/mixins.scss";
+
+.products{
+    // background-color: rgb(208, 199, 199);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    // padding-top:0px ;
+    gap: 15px;
+
+    // transform: translateX(-100%);
+    // animation: slide-left 8s ease 3s forwards;
+
+    @include md{
+        padding: 40px;
+        gap: 40px;
+    }
+    .products-heading{
+        display: block;
+        max-width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .products-items{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap:10px;
+        @include md{
+            justify-content: space-evenly;
+            padding-left: 200px;
+            padding-right:200px;
+            gap:30px;
+            
+        }
+    }
+    
+}
+
+// @keyframes slide-left {
+//     0%{
+//         transform: translateX(100%);
+//     }
+//     // 50%
+//     100%{
+//         transform: translateX(0%);
+//     }
+
+// }

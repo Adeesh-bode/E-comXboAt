@@ -1,0 +1,115 @@
+@import "../../../css-config/mixins.scss";
+// *{
+//      outline: 2px solid red;
+// }
+.hero-banner{
+    padding: 30px 0;
+    position: relative;
+    background-image: linear-gradient(to right , #8e3de2, #4a00e0);
+    // height: 500px;
+    @include md{
+        height: calc(100vh - 60px);
+        
+    }
+    .content{
+        height: 100%;
+        display: flex;
+        // flex-direction: column;
+        flex-direction: column-reverse;// responsive k liye usefull reverse...
+        justify-content: flex-end;
+        align-items:center;
+        max-width: calc(100% - 20px);
+        position: relative;
+        margin: 0 auto; // top bottom 0 ho jata hai aur left& right mai equally distribute jata hai...
+        // the above is 2 var represnentatn where 1st var rep. top&bot and 2nd left&right
+        // 1px 0px 1px  2px is 4 var : top left bottom rigth anticlockwise
+        
+        @include md{
+            flex-direction: row;
+            max-width: 1200px
+        }
+        // @include lg{} bich ki state lana padhega...
+        
+        .banner-img{
+            position: relative;
+            z-index:9;
+            width: 200px;
+            margin-bottom: 20px;
+            
+            @include md{
+                height: 490px;
+                width: 400px;
+                margin-right: 90px;
+                // margin-top: 50px;
+                margin-bottom: 0;
+            }
+            @include xxl{
+                // high resolution screen 1920
+                width: 600px;
+                margin-right: 0px;
+                margin-top: 0px;
+                // margin-bottom: 0;    inherit ho jaega medium screeen se...........
+                
+            }
+        }
+        .text-content{
+            color:white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include md{
+                position: absolute;
+                left:50px;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            @include xxl{
+                left:0;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1;
+                @include md{
+                    font-size: 60px;
+                }
+            }
+            p{
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md{
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas{
+                display: flex;
+                justify-content: center;
+                gap:20px;
+                .banner-cta{
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    width: fit-content;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+                .v2{
+                    background-color:white;
+                    color: black;
+                }
+                .banner-cta:hover{
+                    opacity:0.6;
+                }
+            }
+
+        }
+    }
+
+}

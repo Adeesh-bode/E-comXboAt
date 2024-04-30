@@ -1,0 +1,120 @@
+@import "../../../css-config/mixins.scss"; 
+.newsletter-section{
+
+    width: 100%;
+    // position: relative;
+    background-image: url("../../../assets/newsletter-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    object-fit: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    // height:fit-content;
+
+
+    transform: translateY(100%);
+    animation: slideup 3s ease  5s forwards;
+
+    @include md{
+        background-size:cover;
+    }
+    .newsletter-content{
+        // position:absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+        padding:20px;
+    }
+    @include md{
+        gap: 15px;
+        padding:30px;
+    }
+    .small-text{
+        font-weight: 500;
+        text-transform: uppercase;
+        color: rgb(77, 77, 77);
+        font-size: 0.7rem;
+        @include md{
+            font-size: 1rem;
+        }
+    }
+    .big-text{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.7rem;
+        //line-spacing
+        @include md{
+            font-size: 1.1rem;
+        }
+    }
+    .form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+
+        .email-input{
+            width: 160px;
+            text-align: left;
+            padding: 6px;
+            @include md{
+                width: 280px;   
+            }
+        }
+        .subscribe{
+            cursor: pointer;
+            border: none;
+            color: white;
+            padding: 7px;
+            padding-left: 7px;
+            padding-right: 7px;
+            background-color: purple;
+            text-align: center;            
+            @include md{
+                padding-left: 15px;
+                padding-right: 15px;
+
+            }
+        }
+    }
+    .text{
+        color: rgb(77, 77, 77);
+        font-weight: 400;
+        font-size: 0.7rem;
+        @include md{
+            font-size: 0.9rem;
+        }
+    }
+    .social-icons{
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:8px;
+        svg{
+            overflow: visible;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            padding: 4px;
+            
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            
+        }
+    }
+
+}
+@keyframes slideup {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

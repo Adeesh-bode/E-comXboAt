@@ -1,0 +1,87 @@
+@import "../../../css-config/mixins.scss";
+.cart-items {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .item {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        // gap: 15px;
+        // height: 180px;
+        &:hover {
+            background-color: rgb(198, 194, 194);
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 120px;
+            img {
+                // width: fit-content;
+                object-fit: contain; // faatt jaegi iske bigar...
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .right {
+            height: 100%;
+            width: 100%;
+            padding:8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 7px;
+            .details {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                // .descrip {
+                //     max-width: 60px;
+                // }
+                // .title{
+                //     // flex-grow: 1;
+                //     flex-shrink: 1;
+                //     text-overflow: ellipsis; /* isse jo overflow text hai vo wrap mhi hoga aur uske jagah pe "..." aaj jaege */
+                //     white-space: nowrap;
+                //     overflow: hidden;
+                // }
+            }
+            .quantity {
+                color: black;
+                height: 30px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                
+               .display {
+                   height: 100%;
+                   font-size: 18px;
+                   border-top: 2px solid black;
+                   border-bottom: 2px solid black;
+                   padding: 3px 8px;
+                }
+                button {
+                //    background-color: purple;
+                   color: purple; 
+                   font-size: 18px;
+                   padding: 3px 5px;
+                   font-size: 14px;
+                   height: 100%;
+                   border: 2px solid black;
+               }
+           }
+           .total {
+               span {
+                   color: purple;
+               }
+           }
+       }
+    }
+}

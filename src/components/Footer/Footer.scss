@@ -1,0 +1,85 @@
+@import "../../css-config/mixins.scss";
+// *{
+//     outline: 1px solid red;
+// }
+.footer-content{  
+    display: flex;
+    flex-direction: column;
+    
+    @include slideup;
+    
+    .footer-main{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+        gap:20px;
+        flex-wrap: wrap; // or can use flex-flow:wrap
+        
+        font-size: 0.6rem;
+        
+
+        @include md{
+            gap:25px;
+            font-size: 0.9rem;
+            padding: 30px;
+            flex-wrap: nowrap;
+            justify-content: center;
+        } 
+        
+        .footer-subcontent{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: left;
+            gap:10px;
+            width:150px; // max-width ka use samjha yaha...ref yaad by footer....
+
+            @include md{
+                width:200px;
+                // padding: 30px;
+            }
+
+            svg{
+                display: inline-block;
+            }
+        }
+        .contact{
+            width:170px ;
+            @include md{
+                width:250px ;
+            }
+        }
+
+        .categories{
+            gap: 6px;
+            @include md{
+                gap: 10px;
+
+            }
+        }
+        .pages{
+            gap: 6px;
+            @include md{
+                gap: 10px;
+    
+            }
+        }
+    
+    }
+    .additional{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+        padding: 7px;
+        font-size: 0.5rem;
+        @include md{
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 0.8rem;
+        }
+    
+    }
+}  
