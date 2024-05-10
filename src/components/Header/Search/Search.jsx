@@ -24,6 +24,7 @@ const Search = () => {
     let {data} = useFetch(`/api/products?populate=*&filters[title][$contains]=${query}`);
     console.log(query);
     // $ operator in strapi ex. ne fr notequal
+    //? for optional chaining prevets error crash if resource not found
 
     if(!query.length){
         data=null;
