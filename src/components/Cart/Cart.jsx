@@ -20,7 +20,7 @@ const Cart = () => {
         try {
             const stripe = await stripePromise;
             const res = await makePaymentRequest.post("/api/orders",{products:cartItems})
-            await stripe.redirectToCheckout({
+            await stripe.redirectToCheckout({ // routes to stripes pre-built ui page in stripe library 
             sessionId: res.data.stripeSession.id
         })
 
