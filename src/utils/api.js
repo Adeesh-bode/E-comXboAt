@@ -23,8 +23,8 @@ export const fetchDataFromApi = async (url) =>{
         return error;
     }
 }
-// created axiosinstance
-
+// created axios instance
+// stripe function responsbile for payments
 export const makePaymentRequest = axios.create({
     baseURL : process.env.REACT_APP_DEV_URL,
     headers: {
